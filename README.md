@@ -38,10 +38,10 @@ sudo apt install screen
 ```
 Git clone bot discord , go to folder & Install module using venv :
 ```
-git clone https://github.com/shareithub/discord-bot.git
+git clone https://github.com/dropohub/discord-bot.git
 cd discord-bot
-python3 -m venv shareithub
-source shareithub/bin/activate
+python3 -m venv Dropohub
+source dropohub/bin/activate
 pip install -r requirements.txt
 ```
 Edit file `.env` copy & paste your Gemini API & Discord token :

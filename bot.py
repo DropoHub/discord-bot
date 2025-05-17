@@ -71,8 +71,8 @@ def get_random_message_from_file():
         return "File pesan.txt tidak ditemukan!"
 
 def generate_language_specific_prompt(user_message, prompt_language):
-    if prompt_language == 'id':
-        return f"Balas pesan berikut dalam bahasa Indonesia: {user_message}"
+    if prompt_language == 'hi':
+        return f"Is message ka Hinglish mein reply do: {user_message}"
     elif prompt_language == 'en':
         return f"Reply to the following message in English: {user_message}"
     else:
@@ -284,18 +284,18 @@ def get_server_settings(channel_id, channel_name):
     use_google_ai = input("  Gunakan Google Gemini AI? (y/n): ").strip().lower() == 'y'
     
     if use_google_ai:
-        prompt_language = input("  Pilih bahasa prompt (en/id): ").strip().lower()
-        if prompt_language not in ["en", "id"]:
-            print("  Input tidak valid. Default ke 'id'.")
+        prompt_language = input("  Pilih bahasa prompt (en/hi): ").strip().lower()
+        if prompt_language not in ["en", "hi"]:
+            print("  Input tidak valid. Default ke 'hi'.")
             prompt_language = "id"
         enable_read_message = True
         read_delay = int(input("  Masukkan delay membaca pesan (detik): "))
         delay_interval = int(input("  Masukkan interval (detik) untuk setiap iterasi auto reply: "))
         use_slow_mode = input("  Gunakan slow mode? (y/n): ").strip().lower() == 'y'
     else:
-        prompt_language = input("  Pilih bahasa pesan dari file (en/id): ").strip().lower()
-        if prompt_language not in ["en", "id"]:
-            print("  Input tidak valid. Default ke 'id'.")
+        prompt_language = input("  Select message language from file (en/hi): ").strip().lower()
+        if prompt_language not in ["en", "hi"]:
+            print("  Input tidak valid. Default ke 'hi'.")
             prompt_language = "id"
         enable_read_message = False
         read_delay = 0
