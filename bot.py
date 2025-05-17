@@ -1,4 +1,4 @@
-import shareithub
+import dropohub
 import json
 import threading
 import time
@@ -6,7 +6,7 @@ import os
 import random
 import re
 import requests
-from shareithub import shareithub
+from dropohub import dropohub
 from dotenv import load_dotenv
 from datetime import datetime
 from colorama import init, Fore, Style
